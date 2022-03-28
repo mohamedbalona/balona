@@ -1,0 +1,544 @@
+/* all elements */
+
+
+:root{
+--min-color:#367cff;
+--paragraph-color:#707070;
+--second-color:#303030;
+--min-padding: 80px;
+--sec-padding: 20px;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+body{
+    font-family: 'Poppins', sans-seri;
+
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #707070;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #367cff;
+}
+
+/* container*/
+
+.cont{
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* start nav*/
+
+nav{
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid #ddd;
+    line-height: 70px;
+}
+
+nav .logo h2{
+    display: flex;
+    align-items: center;
+    float: left;
+    text-transform: uppercase;
+    color: var(--min-color);
+}
+
+
+nav .logo h2 img{
+    width: 70px;
+}
+
+nav .links ul{
+    float: right;
+}
+
+nav .links ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 10px;
+}
+
+nav .links ul li a{
+    color: var(--second-color);
+    transition: 0.2s;
+}
+
+nav .links ul li a:hover,
+nav .links ul li a.active{
+color: var(--min-color);
+}
+
+nav label{
+    float: right;
+    display: none;
+}
+
+nav input{
+    display: none;
+}
+
+
+/* end nav*/
+
+/*=======================================*/
+
+/*strat home*/
+
+.home{
+    width: 100%;
+}
+
+.home .flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: calc(100vh - 70px);
+}
+
+.home .info h3{
+    font-size: 30px;
+    color: var(--second-color);
+    margin-bottom: 15px;
+}
+
+.home .info{
+    width: 450px;
+}
+
+.home .info p{
+color: var(--paragraph-color);
+line-height: 1.6;
+margin-bottom: 30px;
+}
+
+.home .info a{
+    color: white;
+    padding: 15px;
+    background-color: var(--min-color);
+    border-radius: 6px;
+    transition: 0.5s;
+}
+
+.home .info a:hover{
+    color: var(--min-color);
+    border: 1px solid var(--min-color);
+    background-color: white;
+}
+
+.home .imges img{
+    width: 420px;
+}
+
+/*end home*/
+
+/*=======================================*/
+
+/*strat about*/
+
+.about{
+    background-color: #efefef;
+    padding: var(--min-padding) 0;
+}
+
+.heading{
+    position: relative;
+    color: var(--min-color);
+    text-transform: uppercase;
+    width: fit-content;
+    margin: 20px auto;
+    font-size: 40px;
+}
+
+.heading::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 50%;
+    background-color: var(--min-color);
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.about .flex{
+    padding: 50px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about .info{
+    width: 500px;
+}
+
+.about .info h3{
+    color: var(--min-color);
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+}
+
+.about .info p{
+    color: var(--paragraph-color);
+    margin-bottom: 20px;
+    line-height: 1.5;
+    
+}
+
+.about .imges img{
+    width: 500px;
+}
+
+/*end about*/
+
+
+/*=======================================*/
+
+/*strat Services*/
+
+.services{
+    padding: var(--min-padding) 0;
+
+}
+
+.services .flex{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 50px;
+    padding: 50px 0 0 0;
+}
+.services .info {
+    text-align: center;
+}
+
+.services .info span i{
+    color: var(--min-color);
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.services .info  h3{
+    color: var(--second-color);
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+
+}
+
+.services .info p{
+    color: var(--paragraph-color);
+    line-height: 1.6;
+}
+
+/*end Services*/
+
+
+
+
+/*strat Skills*/
+
+.skills{
+    padding: var(--min-padding);
+    background-color: #efefef;
+}
+
+.skills .flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0 0 0;
+}
+
+.skills .imges img{
+    width: 450px;
+}
+
+.skills .data{
+    width: 500px;
+}
+
+.skills .data .info{
+    margin: 30px 0;
+}
+
+.skills .data h3{
+    color: var(--second-color);
+    font-weight: 500;
+    font-size: 20px;
+}
+
+
+
+.skills .data .prog{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background-color: #367cff3f;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+.skills .data .prog span{
+    position: absolute;
+    height: 100%;
+    background-color: var(--min-color);
+    border-radius: 5px;
+    
+}
+
+.skills .data .prog span::before{
+    content: attr(data);
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--min-color);
+    padding: 8px;
+    color: white;
+    border-radius: 5px;
+
+
+}
+
+/*end Skills*/
+
+
+
+/*start Portfolio*/
+
+.Portfolio{
+    padding: var(--min-padding);
+}
+
+.Portfolio .flex{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 50px;
+    padding: 50px 0 0 0;
+}
+
+.Portfolio .card{
+    background-color: #efefef;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.Portfolio .card p{
+    margin: 15px 0;
+}
+
+.Portfolio .card img{
+    width: 100%;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.Portfolio .card img:hover{
+    opacity: 1;
+}
+
+.Portfolio .card a{
+    color: var(--min-color);
+}
+
+
+
+/*end Portfolio*/
+
+
+
+
+/*start contact*/
+.contact{
+    padding: var(--min-padding) 0;
+    background-color: #efefef;
+}
+
+.contact .flex{
+    padding: 50px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact .imges img{
+    width: 500px;
+}
+
+.contact .flex .form{
+    width: 500px;
+}
+
+.contact .flex .form input{
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #367cff;
+    outline: none;
+    padding: 10px;
+    background-color: #efefef;
+    margin-bottom: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.contact .flex .form textarea{
+    height: 100px;
+    width: 100%;
+    border: 1px solid #ddd;
+    outline: none;
+    padding: 10px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+}
+.contact .flex .form button{
+    width: 90px;
+    font-size: 16px;
+    border: none;
+    background-color: var(--min-color);
+    color: white;
+    padding: 10px;
+    float: right;
+    cursor: pointer;
+}
+
+/*end contact*/
+
+.footer{
+    background-color: var(--min-color);
+    padding: 20px 0;
+    text-align: center;
+
+}
+
+.footer p{
+    color: #ddd;
+
+}
+
+.footer a{
+    color: #b4afaf;
+    text-decoration: underline;
+}
+
+
+
+
+/*media*/
+
+
+/*mobile*/
+
+@media(max-width:767px){
+    .cont{
+        width: 300px;
+    }
+    nav{
+        position: fixed;
+        background-color: white;
+        z-index: 999;
+    }
+    nav label{
+        display: block;
+    }
+    nav ul {
+        width: 100%;
+        position: fixed;
+        background-color: #ddd;
+        top: 70px;
+        height: 100vh;
+        left: -100%;
+        text-align: center;
+        transition: 0.5s;
+    }
+    nav ul li{
+        width: 100%;
+        display: block;
+        line-height: 20px;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+    nav label i:hover{
+        color: var(--min-color);
+    }
+
+    nav .logo h2 img{
+        width: 55px;
+    }
+    .contact .imges img,
+    .skills .imges img,
+    .about .imges img,
+    .home .imges img{
+        display: none;
+    }
+    
+}
+
+/*small*/
+
+@media(min-width:768px){
+    .cont{
+        width: 750px;
+    }
+    .contact .imges img,
+    .skills .imges img,
+    .about .imges img,
+    .home .imges img{
+        display: none;
+    }
+}
+
+/*mediul*/
+
+
+@media(min-width:992px){
+    .cont{
+        width: 970px;
+    }
+
+    
+    .home .imges img{
+        display: block;
+    }
+    
+    
+
+}
+
+
+/*larg*/
+
+@media(min-width:1200px){
+    .cont{
+        width: 1170px;
+    }
+    .contact .imges img,
+    .skills .imges img,
+    .about .imges img,
+    .home .imges img{
+        display: block;
+    }
+
+}
